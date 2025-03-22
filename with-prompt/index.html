@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Image Enhancer Tool</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google Fonts for modern typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>AI Image Enhancer Tool</h1>
+
+        <!-- Image Upload Section -->
+        <div class="upload-section">
+            <label for="imageUpload" class="upload-label">
+                Upload Image
+            </label>
+            <input type="file" id="imageUpload" accept="image/*">
+        </div>
+
+        <!-- Image Comparison Section -->
+        <div class="image-comparison">
+            <div class="image-container">
+                <img id="beforeImage" src="#" alt="Before Enhancement">
+                <img id="afterImage" src="#" alt="After Enhancement">
+            </div>
+            <div class="slider"></div>
+        </div>
+
+        <!-- Enhancement Controls -->
+        <div class="controls">
+            <div class="filter">
+                <label for="brightness">Brightness</label>
+                <input type="range" id="brightness" min="0" max="200" value="100">
+            </div>
+            <div class="filter">
+                <label for="contrast">Contrast</label>
+                <input type="range" id="contrast" min="0" max="200" value="100">
+            </div>
+            <div class="filter">
+                <label for="saturation">Saturation</label>
+                <input type="range" id="saturation" min="0" max="200" value="100">
+            </div>
+            <button id="resetBtn">Reset Filters</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

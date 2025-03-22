@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Image Enhancer</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google Fonts for modern typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <h1><i class="fas fa-magic"></i> AI Image Enhancer</h1>
+        </header>
+
+        <!-- Main Content -->
+        <main>
+            <!-- Upload Section -->
+            <div class="upload-section">
+                <label for="imageUpload" class="upload-label">
+                    <i class="fas fa-upload"></i> Upload Image
+                </label>
+                <input type="file" id="imageUpload" accept="image/*">
+            </div>
+
+            <!-- Before and After Image Display -->
+            <div class="image-container">
+                <div class="image-box">
+                    <h2>Before</h2>
+                    <img id="beforeImage" src="#" alt="Before Enhancement">
+                </div>
+                <div class="image-box">
+                    <h2>After</h2>
+                    <img id="afterImage" src="#" alt="After Enhancement">
+                </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="action-buttons">
+                <button id="enhanceBtn" disabled>
+                    <i class="fas fa-wand-magic-sparkles"></i> Auto Enhance
+                </button>
+                <a id="downloadBtn" class="download-btn" download="enhanced_image.png">
+                    <i class="fas fa-download"></i> Download
+                </a>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer>
+            <p>Created with <i class="fas fa-heart"></i> by <strong>Code With Code</strong></p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
