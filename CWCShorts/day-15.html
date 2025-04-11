@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Hover Effects</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+        }
+        .card h3 {
+            margin: 0 0 10px;
+        }
+        .card p {
+            margin: 0;
+            color: #666;
+        }
+        .card::after {
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            transition: top 0.3s;
+        }
+        .card:hover::after {
+            top: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="card-grid">
+        <div class="card">
+            <h3>Card 1</h3>
+            <p>Hover over me!</p>
+        </div>
+        <div class="card">
+            <h3>Card 2</h3>
+            <p>Hover over me!</p>
+        </div>
+        <div class="card">
+            <h3>Card 3</h3>
+            <p>Hover over me!</p>
+        </div>
+    </div>
+</body>
+</html>

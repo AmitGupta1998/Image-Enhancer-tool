@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creative UI Elements</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #e0e0e0;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        button, .card, input {
+            font-size: 18px;
+            padding: 12px 24px;
+            border: none;
+            outline: none;
+            transition: all 0.4s ease-in-out;
+            border-radius: 10px;
+        }
+
+        /* 1. Morphing Button */
+        .morph-button {
+            background: #ff6b6b;
+            color: white;
+        }
+
+        .morph-button:hover {
+            border-radius: 50px;
+            letter-spacing: 2px;
+            transform: scale(1.1);
+            background: #ff4757;
+        }
+
+        /* 2. Glowing Button */
+        .glow-button {
+            background: #1e90ff;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .glow-button:hover {
+            box-shadow: 0px 0px 10px #1e90ff, 0px 0px 40px #1e90ff;
+        }
+
+        /* 3. Neumorphic UI Elements */
+        .neumorphic {
+            background: #e0e0e0;
+            box-shadow: 6px 6px 12px #b8b8b8, -6px -6px 12px #ffffff;
+            color: #333;
+            transition: all 0.2s;
+        }
+
+        .neumorphic:active {
+            box-shadow: inset 4px 4px 10px #b8b8b8, inset -4px -4px 10px #ffffff;
+        }
+
+        .card {
+            width: 200px;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        input {
+            padding: 10px;
+            width: 200px;
+            border-radius: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <button class="morph-button">Morph Button</button>
+    <button class="glow-button">Glow Button</button>
+    <button class="neumorphic">Neumorphic Button</button>
+    <div class="card neumorphic">Neumorphic Card</div>
+    <input type="text" class="neumorphic" placeholder="Neumorphic Input">
+</body>
+</html>

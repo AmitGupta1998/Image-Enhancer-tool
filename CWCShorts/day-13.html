@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Checkbox & Radio Buttons</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            flex-direction: column;
+        }
+        .toggle-container {
+            margin: 10px 0;
+        }
+        .toggle-label {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+        .toggle-label input {
+            display: none;
+        }
+        .toggle-custom {
+            width: 40px;
+            height: 20px;
+            background: #ddd;
+            border-radius: 10px;
+            position: relative;
+            margin-right: 10px;
+            transition: background 0.3s;
+        }
+        .toggle-custom::after {
+            content: '';
+            width: 16px;
+            height: 16px;
+            background: white;
+            border-radius: 50%;
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            transition: transform 0.3s;
+        }
+        input:checked + .toggle-custom {
+            background: #00fffc;
+        }
+        input:checked + .toggle-custom::after {
+            transform: translateX(20px);
+        }
+    </style>
+</head>
+<body>
+    <div class="toggle-container">
+        <label class="toggle-label">
+            <input type="checkbox">
+            <span class="toggle-custom"></span>
+            Toggle Me
+        </label>
+    </div>
+    <div class="toggle-container">
+        <label class="toggle-label">
+            <input type="radio" name="radio">
+            <span class="toggle-custom"></span>
+            Option 1
+        </label>
+    </div>
+    <div class="toggle-container">
+        <label class="toggle-label">
+            <input type="radio" name="radio">
+            <span class="toggle-custom"></span>
+            Option 2
+        </label>
+    </div>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Pricing Table</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .pricing-table {
+            display: flex;
+            gap: 20px;
+        }
+        .pricing-card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            width: 150px;
+        }
+        .pricing-card:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+        }
+        .pricing-card h3 {
+            font-size: 1.5rem;
+            margin: 0 0 10px;
+        }
+        .pricing-card p {
+            font-size: 1rem;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="pricing-table">
+        <div class="pricing-card">
+            <h3>Basic</h3>
+            <p>$10/month</p>
+        </div>
+        <div class="pricing-card">
+            <h3>Pro</h3>
+            <p>$20/month</p>
+        </div>
+        <div class="pricing-card">
+            <h3>Premium</h3>
+            <p>$30/month</p>
+        </div>
+    </div>
+</body>
+</html>
